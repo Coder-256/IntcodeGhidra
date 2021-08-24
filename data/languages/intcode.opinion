@@ -1,0 +1,5 @@
+<opinions>
+  <constraint loader="Intcode Text" compilerSpecID="default">
+      <constraint processor="Intcode" endian="little" size="64" />
+  </constraint>
+</opinions>

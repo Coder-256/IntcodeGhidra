@@ -1,0 +1,33 @@
+define endian=little;
+define alignment=1;
+
+define space ram      type=ram_space      size=8 default;
+define space register type=register_space size=8;
+
+define register offset=0x00 size=8 [ PC SP ];
+
+define token word1 (64)
+	op   = ( 0,62) # https://github.com/NationalSecurityAgency/ghidra/issues/2445
+	sign = (63,63)
+#	sa   = ( 0,63) signed
+;
+
+define token word2 (64)
+	sb   = ( 0,63) signed
+;
+
+define token word3 (64)
+	sc   = ( 0,63) signed
+	uc   = ( 0,63)
+;
+
+define token word4 (64)
+	sd   = ( 0,63) signed
+;
+
+
+define pcodeop input;
+define pcodeop output;
+define pcodeop halt;
+
+@include "intcode_gen.sinc"

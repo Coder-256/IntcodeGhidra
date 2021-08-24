@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<processor_spec>
+  <programcounter register="PC"/>
+  <context_data>
+  	<tracked_set space="ram" first="0" last="0">
+  	  <set name="SP" val="0"/>
+  	</tracked_set>
+  </context_data>
+</processor_spec>
